@@ -1,0 +1,11 @@
+video {
+    max-height: 300px;
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}

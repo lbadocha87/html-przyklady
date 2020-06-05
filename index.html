@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <video controls autoplay muted>
+        <source src="video/let-it-be.mp4" type="video/mp4">
+    </video>
+
+
+    <audio controls src="audio/let-it-be.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+
+    <article>
+        <img src="" alt="">
+        <header>
+            <h2>Tutuł posta</h2>
+            <p>autor: Łukasz</p>
+            <time>april 16</time>
+        </header>
+        <p>Lorem <span class="red-text">ipsum</span> dolor sit amet consectetur adipisicing elit. Suscipit deserunt maxime hic, possimus, ducimus, quos at architecto ipsum eaque aperiam sapiente vero ut laboriosam vitae quod corrupti neque. Amet magni possimus tenetur <span class="green-text">consectetur</span> placeat nulla velit, praesentium voluptate porro totam explicabo, illo voluptates quidem. Ducimus dicta ipsa facere voluptatem <span class="red-text">deserunt</span> cumque eius aliquid quo dolores est. Nihil aspernatur molestiae quae!</p>
+        <footer>tagi: lorem, ipsum</footer>
+    </article>
+
+    <section>
+        <h2>Tutuł posta</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit deserunt maxime hic, possimus, ducimus, quos at architecto ipsum eaque aperiam sapiente vero ut laboriosam vitae quod corrupti neque. Amet magni possimus tenetur consectetur placeat nulla velit, praesentium voluptate porro totam explicabo, illo voluptates quidem. Ducimus dicta ipsa facere voluptatem deserunt cumque eius aliquid quo dolores est. Nihil aspernatur molestiae quae!</p>
+    </section>
+
+
+    <form action="" id="form">
+        <input type="text" placeholder="nazwa uzytkownika">
+        <input type="text" placeholder="hasło">
+        <input type="submit">
+    </form>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e){
+          
+            let passwordInput = document.querySelector('input:nth-of-type(2)');
+            if(passwordInput.value === '') {
+                e.preventDefault();
+                passwordInput.style.border = '3px solid red';
+                let alertPar = document.createElement('p');
+                alertPar.innerText = 'Wpisz hasło';
+                passwordInput.parentElement.appendChild(alertPar, passwordInput.nextSibling);
+            }
+
+            console.log(passwordInput);
+        })
+    </script>
+
+
+</body>
+</html>
